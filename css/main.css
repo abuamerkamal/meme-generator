@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: orange;
+}
+
+/** canvas-container **/
+.canvas-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.34);
+  margin: auto;
+  width: 70vw;
+  height: 65vh;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  background-color: tomato;
+  border: 1px solid whitesmoke;
+}
+
+/** Gallery Section **/
+.gallery-container {
+  margin: auto;
+  display: flex;
+  gap: 7px;
+  width: 340px;
+}
+
+.gallery-container img {
+  width: 100%;
+}

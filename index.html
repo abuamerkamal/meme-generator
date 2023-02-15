@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meme generator</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body onload="onInit()">
+  <header>
+    <nav class="main-menu">
+      <ul class="main-menu-nav flex space-between align-center ">
+        <a href="" class="link-memes">Memes</a>
+        <a href="" class="link-generator">Generator</a>
+        <a href="" class="link-about">About</a>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery-container">
+  </section>
+
+  <section class="editor-page-container">
+    <div class="canvas-container">
+      <canvas id="canvas" height="450" width="450"></canvas>
+      <div class="editor">
+        <label for="txt">Text:</label>
+        <input type="text" id="txt" oninput="onTextInput(this.value)" placeholder="txt line" />
+        <button>
+          <input oninput="changeTxtColor(this.value)" type="color" value="white" id="color" />
+        </button>
+        <button onclick="changeFontSize(true)" class="increase">A+</button>
+        <button onclick="changeFontSize(false)" class="decrease">A-</button>
+        <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <script src="js/memeController.js"></script>
+  <script src="js/galleyController.js"></script>
+  <script src="js/memeService.js"></script>
+</body>
+
+</html>
