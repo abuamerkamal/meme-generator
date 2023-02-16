@@ -14,14 +14,11 @@
     <nav class="main-menu">
       <ul class="main-menu-nav flex space-between align-center ">
         <a href="" class="link-memes">Memes</a>
-        <a href="" class="link-generator">Generator</a>
+        <a href="" class="link-gallery">Gallery</a>
         <a href="" class="link-about">About</a>
       </ul>
     </nav>
   </header>
-
-  <section class="gallery-container">
-  </section>
 
   <section class="editor-page-container">
     <div class="canvas-container">
@@ -35,14 +32,24 @@
         <button onclick="changeFontSize(true)" class="increase">A+</button>
         <button onclick="changeFontSize(false)" class="decrease">A-</button>
         <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
+        <!-- Switch Btn -->
+        <button class="btn switchline-btn" onclick="onSwitchLine()">🔁</button>
+        <!-- Add Line Btn-->
+        <button class="btn addLine-btn" onclick="onAddLine()">➕</button>
+        <!-- Delete Line Btn-->
+        <button class="btn removeLine-btn" onclick="onRemoveLine()">❌</button>
       </div>
     </div>
+  </section>
+
+  <section class="gallery-container">
   </section>
 
   <footer></footer>
 
   <script src="js/memeController.js"></script>
-  <script src="js/galleyController.js"></script>
+  <script src="js/galleryController.js"></script>
+  <script src="js/imgGalleryService.js"></script>
   <script src="js/memeService.js"></script>
 </body>
 

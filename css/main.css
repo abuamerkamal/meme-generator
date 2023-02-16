@@ -7,7 +7,6 @@ body {
   background-color: orange;
 }
 
-/** canvas-container **/
 .canvas-container {
   display: flex;
   background-color: rgba(0, 0, 0, 0.34);
@@ -23,7 +22,6 @@ canvas {
   border: 1px solid whitesmoke;
 }
 
-/** Gallery Section **/
 .gallery-container {
   margin: auto;
   display: flex;
@@ -34,3 +32,15 @@ canvas {
 .gallery-container img {
   width: 100%;
 }
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #3ce070;
+  height: 4vh;
+}
+/* 
+img {
+  width: 15vw;
+  height: 15vh;
+} */

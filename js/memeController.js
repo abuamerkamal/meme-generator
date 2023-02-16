@@ -1,11 +1,14 @@
 'use strict'
+
 let gCanvas
 let gCtx
+// let nextLineDiff = 0
 
 function onInit() {
   gCanvas = document.querySelector('#canvas')
   gCtx = gCanvas.getContext('2d')
   renderGallery()
+  // renderMeme()
 }
 
 function renderMeme() {
@@ -33,7 +36,7 @@ function drawTxt(text, size, color, align, x, y) {
 
 function onTextInput(userTxt) {
   setLineTxt(userTxt)
-  const { memeTxt } = getMeme()
+  // const { memeTxt } = getMeme()
   renderMeme()
 }
 
@@ -48,4 +51,18 @@ function changeFontSize(increaseClicked) {
   memeTxt.size += diff
   //
   renderMeme()
+}
+
+function onAddLine () {
+  addNewLine ()
+  renderMeme ()
+}
+
+function onRemoveLine () {
+  RemoveLastLine ()
+  renderMeme ()
+}
+
+function onSwitchLine () {
+  changeSelectedLine ()
 }
