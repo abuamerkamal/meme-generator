@@ -5,52 +5,93 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meme generator</title>
+  <title>Meme Generator</title>
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body onload="onInit()">
   <header>
-    <nav class="main-menu">
-      <ul class="main-menu-nav flex space-between align-center ">
-        <a href="" class="link-memes">Memes</a>
-        <a href="" class="link-gallery">Gallery</a>
-        <a href="" class="link-about">About</a>
+    <nav>
+      <ul>
+        <li class="logo">
+          <a href="">
+            <h1>LOGO</h1>
+          </a>
+        </li>
+        <li><a href="">Memes</a></li>
+        <li><a href="">Gallery</a></li>
+        <li onclick="onAboutClick()"><a href="">About</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="editor-page-container">
+  <main class="gallery-page">
+    <section class="gallery-toolbar">
+      <button onclick="onGenerateRandomMeme()">I'm Flexible</button>
+    </section>
+
+    <section class="gallery-container">
+    </section>
+  </main>
+
+  <section class="editor-page-container" hidden>
     <div class="canvas-container">
-      <canvas id="canvas" height="450" width="450"></canvas>
+      <canvas id="canvas" height="650" width="650"></canvas>
+
       <div class="editor">
-        <label for="txt">Text:</label>
-        <input type="text" id="txt" oninput="onTextInput(this.value)" placeholder="txt line" />
-        <button>
-          <input oninput="changeTxtColor(this.value)" type="color" value="white" id="color" />
+        <input type="text" id="txt" oninput="onTextInput(this.value)" placeholder="Write Something..." />
+        <article class="first-container">
+          <button class="btn switchline-btn" onclick="onSwitchLine()">🔃</button>
+          <button class="btn addLine-btn" onclick="onAddLine()">➕</button>
+          <button class="btn removeLine-btn" onclick="onRemoveLine()">🗑️</button>
+        </article>
+
+        <article class="second-container">
+          <button class="btn moveTxtUp-btn" onclick="onMoveTxtUp()">⬆️</button>
+          <button class="btn moveTxtDown-btn" onclick="onMoveTxtDown()">⬇️</button>
+          <button class="btn moveTxtRight-btn" onclick="onMoveTxtRight()">➡️</button>
+          <button class="btn moveTxtLeft-btn" onclick="onMoveTxtLeft()">⬅️</button>
+          <label for="create-color">🎨
+            <input type="color" id="create-color" style="display: none" list="mycolors"
+              oninput="changeTxtColor(this.value)" />
+          </label>
+          <select class="font-select" onchange="onFontSelect(this.value)">
+            <option value="impact">Impact</option>
+            <option value="cursie">Cursie</option>
+            <option value="arial">Arial</option>
+          </select>
+
+          <button onclick="changeFontSize(true)" class="btn increase">
+            <img src="logos/increase font - icon.png" />
+          </button>
+          <button onclick="changeFontSize(false)" class="btn decrease">
+            <img src="logos/decrease font - icon.png" />
+          </button>
+        </article>
+
+        <article class="fourth-container">
+          <button>
+          <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
         </button>
-        <button onclick="changeFontSize(true)" class="increase">A+</button>
-        <button onclick="changeFontSize(false)" class="decrease">A-</button>
-        <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
-        <!-- Switch Btn -->
-        <button class="btn switchline-btn" onclick="onSwitchLine()">🔁</button>
-        <!-- Add Line Btn-->
-        <button class="btn addLine-btn" onclick="onAddLine()">➕</button>
-        <!-- Delete Line Btn-->
-        <button class="btn removeLine-btn" onclick="onRemoveLine()">❌</button>
+        <input type="file" class="fourth-container" name="image" onchange="onImageInput(event)"/>
+        <!-- <button class="btn" onclick="onUploadImg()">
+        Share
+      </button> -->
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="gallery-container">
-  </section>
-
-  <footer></footer>
+  <footer>
+    <small>MemeGenerator © 2023</small>
+  </footer>
 
   <script src="js/memeController.js"></script>
-  <script src="js/galleryController.js"></script>
-  <script src="js/imgGalleryService.js"></script>
+  <script src="js/galleyController.js"></script>
   <script src="js/memeService.js"></script>
+  <script src="js/uoload-from-local.js"></script>
+  <script src="js/sharing-on-facebook.js"></script>
+
 </body>
 
 </html>
