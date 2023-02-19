@@ -119,6 +119,30 @@ function onMoveTxtLeft() {
   renderMeme()
 }
 
+function alignLeft() {
+  const selectedline = getSelectedLine()
+  console.log('selectedline', selectedline)
+  var textWidth = gCtx.measureText(selectedline.txt).width
+  console.log('textWidth', textWidth)
+  selectedline.x -= 100
+  renderMeme()
+}
+
+function alignRight() {
+  const selectedline = getSelectedLine()
+  console.log('selectedline', selectedline)
+  var textWidth = gCtx.measureText(selectedline.txt).width
+  console.log('textWidth', textWidth)
+  selectedline.x += 100
+  renderMeme()
+}
+
+function alignCenter() {
+  const selectedline = getSelectedLine()
+  selectedline.x = gCanvas.width / 2
+  renderMeme()
+}
+
 function saveLineXY(mimeLine, x, y) {
   mimeLine.x = x
   mimeLine.y = y
@@ -187,13 +211,10 @@ function onUp() {
   document.body.style.cursor = 'grab'
 }
 
-function onEmojiClick(emojiName, emoji) {
-  getMeme().emojis.push({ name: emojiName, emoji, x: gCanvas.width / 2, y: gCanvas.height / 2 })
-  renderMeme()
-}
-
 function downloadCanvas(elLink) {
   const data = gCanvas.toDataURL()
   elLink.href = data
   elLink.download = 'my-img'
 }
+
+

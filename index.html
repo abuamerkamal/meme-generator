@@ -55,18 +55,28 @@
             <input type="color" id="create-color" style="display: none" list="mycolors"
               oninput="changeTxtColor(this.value)" />
           </label>
-          <select class="font-select" onchange="onFontSelect(this.value)">
-            <option value="impact">Impact</option>
-            <option value="cursie">Cursie</option>
-            <option value="arial">Arial</option>
-          </select>
-
+          
           <button onclick="changeFontSize(true)" class="btn increase">
             <img src="logos/increase font - icon.png" />
           </button>
           <button onclick="changeFontSize(false)" class="btn decrease">
             <img src="logos/decrease font - icon.png" />
           </button>
+          <button onclick="alignLeft()" class="btn allign-left">
+            <img src="logos/align-to-left.png" />
+          </button>
+          <button onclick="alignCenter()" class="btn allign-center">
+            <img src="logos/center-text-alignment.png" />
+          </button>
+          <button onclick="alignRight()" class="btn allign-right">
+            <img src="logos/align-to-right.png" />
+          </button>
+
+          <select class="font-select" onchange="onFontSelect(this.value)">
+            <option value="impact">Impact</option>
+            <option value="cursie">Cursie</option>
+            <option value="arial">Arial</option>
+          </select>
         </article>
 
         <article class="fourth-container">
