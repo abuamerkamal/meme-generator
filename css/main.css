@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  background-color: tomato;
+  background-image: url(../logos/16.jpg);
 }
 
 header .logo h1 {
@@ -19,14 +19,14 @@ header nav ul {
   gap: 5px;
   text-align: center;
   list-style-type: none;
-  background-color: #60dcf0;
+  background-color: #e0eff1;
   margin: 0;
   height: 5vh;
 }
 
 header ul li:not(:first-child):hover {
   border-bottom: 5px solid rgb(98, 50, 187);
-  background-color: rgb(218, 144, 39);
+  background-color: rgb(235, 195, 139);
   transition: 0.3s;
 }
 
@@ -36,7 +36,7 @@ header a {
 
 .canvas-container {
   display: flex;
-  background-color: aqua;
+  background-color: rgb(204, 239, 239);
   margin: auto;
   margin-top: 24px;
   width: max-content;
@@ -151,7 +151,7 @@ canvas {
   justify-content: center;
   gap: 24px;
   width: 780px;
-  background-color: aqua;
+  background-color: rgb(204, 239, 239);
 }
 
 .gallery-container img {
@@ -169,6 +169,8 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #60dcf0;
+  background-color: #e0eff1;
   text-align: center;
 }
+
+

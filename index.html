@@ -55,7 +55,7 @@
             <input type="color" id="create-color" style="display: none" list="mycolors"
               oninput="changeTxtColor(this.value)" />
           </label>
-          
+
           <button onclick="changeFontSize(true)" class="btn increase">
             <img src="logos/increase font - icon.png" />
           </button>
@@ -81,12 +81,17 @@
 
         <article class="fourth-container">
           <button>
-          <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
-        </button>
-        <input type="file" class="fourth-container" name="image" onchange="onImageInput(event)"/>
-        <!-- <button class="btn" onclick="onUploadImg()">
-        Share
-      </button> -->
+            <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
+            <!-- /////////////////////////////////// -->
+            <button onclick="saveCanvas()">Save</button>
+            <!-- //////////////////////////////////////// -->
+          </button>
+          <!-- //////////////////////////////////////////////// -->
+          <!-- <input type="file" class="fourth-container" name="imgs" onchange="onImgsInput(event)" /> -->
+          <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+          <button class="#" onclick="onUploadImg()">Upload to Facebook</button>
+          <!-- //////////////////////////////////////////////// -->
+
         </article>
       </div>
     </div>

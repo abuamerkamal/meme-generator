@@ -216,5 +216,3 @@ function downloadCanvas(elLink) {
   elLink.href = data
   elLink.download = 'my-img'
 }
-
-
